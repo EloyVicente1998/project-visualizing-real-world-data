@@ -1,57 +1,70 @@
-NOTA: README EN CONSTRUCCIÓN REVISAR WORD POR AHORA :).
+Real_Estate_EDA
 
-Esto se agreggó desde el Branch TEST
+1\. Introducción 📚
 
-![IronHack Logo](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png)
+En el contexto de este trabajo, el ayuntamiento de Barcelona pide a
+McEloy & Hervas, consultora de data analytics, trabajar con un dataset
+para investigar sobre las siguientes preguntas de investigación y
+verificar las hipótesis del ayuntamiento sobre la realidad del precio en
+la ciudad condal de Barcelona.
 
-# Project: Visualizing Real World Data
+¿Cuáles son las zonas con pisos más caros? Hipótesis: El Distrito de
+Sarrià-Sant Gervasi es la zona con pisos más caros de Barcelona
 
-## Overview
+¿Hay una correlación entre la orientación del piso y el precio?
+Hipótesis: Sí hay correlación positiva entre la orientación del piso y
+el precio en los pisos de Barcelona
 
-The goal of this project is to practice creating and interpreting different types of visualizations using real world data.
+¿De qué década del siglo XX son los pisos más caros? Hipótesis: Los
+pisos más caros de Barcelona son los de los años 80
 
-**You will be working individually for this project**, but we'll be guiding you along the process and helping you as you go. 
+¿Hay correlación entre el coste del piso en Barcelona y la distancia a
+metro o calles emblemáticas como Diagonal? Hipótesis: Sí hay correlación
+positiva entre la distancia a estos servicios y la cercanía.
 
----
+Para este caso se ha utilizado un archivo CSV que recoge más de 67.000
+registros de pisos en Barcelona. En este dataset se ha seleccionado los
+pisos construidos durante el Siglo XX para poner foco en la
+investigación y eliminar outliers previamente detectados.
 
-## Technical Requirements
+2\. Objetivo y pasos del proyectos 🎯
 
-The technical requirements for this project are as follows:
+El objetivo principal es extraer insights y corroborar las hipótesis que
+el ayuntamiento de Barcelona tiena. Para ello se inicia un proceso de
+data wrangling y data visualization.
 
- - Select a dataset from a public source.
- - Create a Jupyter notebook to explore the data using simple visualizations  
- - Explain what insight or information is inferred from these visualizations. The explanation should be in the notebook in markdown cells.
- - Create an intereactive visualization with Tableau, Power BI o similar
+2.1. Definir preguntas de investigación ❓
 
-## Necessary Deliverables
+¿Cuáles son las zonas con pisos más caros?
 
-The following deliverables should be pushed to your Github repo for this chapter.
-- A **README** explaining the project
-- **A data folder** containing your data set.
-- **A Jupyter notebook** containing your analysis and the code you used to obtain this analysis.
-- A link to the **dashboard**
+¿Hay una correlación positiva entre la orientación del piso y el precio?
 
-## Suggested Ways to Get Started
+¿De qué década del siglo XX son los pisos más caros?
 
-* **Find a data set to process** - a great place to start looking would be [Awesome Public Data Sets](https://github.com/awesomedata/awesome-public-datasets), [Kaggle Data Sets](https://www.kaggle.com/datasets), or the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php). A great new source is the [Google dataset search](https://toolbox.google.com/datasetsearch).
-* **Perform Preliminary Analysis** - use functions like `describe` to help guide you to the correct insight and data visualization. 
-* **Use the tools in your tool kit** - your knowledge of the different types of visualizations and when to use them should come in handy with this assignment.
-* **Consult documentation and resources provided** to better understand the tools you are using and how to accomplish what you want.
+¿Hay correlación positiva entre el coste del piso en Barcelona y la
+distancia a metro o calles emblemáticas como Diagonal?
 
-## Project Feedback + Evaluation
+2.2 Data Wrangling ✨ En este proceso se seleccionaron las columnas con
+las que trabajar y se eliminaron las que no contribuían a cumplir
+nuestro objetivo objetivo principal, además de seguir todo el proceso
+estándar de Data Wrangling: Tratamiento de nulos, outliers, registros
+duplicados, formateo, agrupación y organización de los datos. Aquí puede
+ver el notebook: shark_attack_project.ipynb.
 
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
+2.3. Data Visualization 📈
 
-* __Creativity__: Did you add a personal spin or creative element into your project submission? Did you incorporate domain knowledge or unique perspective into your analysis.
+Una vez se finaliza el proceso de data wrangling se procede al proceso
+de visualización de datos para obtener insights y oportunidades. Para
+esto, hemos utilizado la librería seaborn. También se trabaja con datos
+geográficos (coordenadas de las observaciones y multypoligon data para
+mapear barrios de Barcelona) en formato geodataframe para construir un
+mapa interactivo usando la librería folium.
 
-* __Code Quality__: Did you follow code style guidance and best practices covered in class?
+3\. Tecnología utilizada 🖥️
 
-* __Total__: Your instructors will give you a total score on your project between:
+Lenguaje de programación \*Python Librerías generales \*Numpy \*Pandas
+\*Geopandas \*Seaborn \*Matplotlib \*Folium \*Unidecode \*Branca
 
-    **Score**|**Expectations**
-    -----|-----
-    0|Does not meet expectations
-    1|Meets expectations, good job!
-    2|Exceeds expectations, you wonderful creature, you!
-
-This will be useful as an overall gauge of whether you met the project goals, but __the more important scores are described in the specs above__, which can help you identify where to focus your efforts for the next project!
+4\. Estructura de la carpeta 📂 └── project-visualizing-real-world-data
+├── notebook │ ├── EDA PROJECT.ipynb │ ├── bcn_map.html ├── data │ ├──
+barcelona_sales.csv │ ├── bcn_poly.csv ├── README.md
