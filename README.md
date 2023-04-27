@@ -62,9 +62,26 @@ mapa interactivo usando la librería folium.
 
 3\. Tecnología utilizada 🖥️
 
-Lenguaje de programación \*Python Librerías generales \*Numpy \*Pandas
-\*Geopandas \*Seaborn \*Matplotlib \*Folium \*Unidecode \*Branca
+Lenguaje de programación 
+* Python 
+Librerías generales 
+* Numpy 
+* Pandas
+* Geopandas 
+* Seaborn 
+* Matplotlib 
+* Folium 
+* Unidecode 
+* Branca
 
-4\. Estructura de la carpeta 📂 └── project-visualizing-real-world-data
-├── notebook │ ├── EDA PROJECT.ipynb │ ├── bcn_map.html ├── data │ ├──
-barcelona_sales.csv │ ├── bcn_poly.csv ├── README.md
+4\. Estructura de la carpeta 📂 
+```bash
+└── project-visualizing-real-world-data
+   ├── notebook
+   │   ├── EDA PROJECT.ipynb
+   │   ├── bcn_map.html
+   ├── data
+   │   ├── barcelona_sales.csv
+   │   ├── bcn_poly.csv
+   └── README.md
+```
